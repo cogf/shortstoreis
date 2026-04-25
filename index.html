@@ -15,44 +15,60 @@
 </head>
 <body class="theme1">
 
-<header class="hero">
+<header>
 <h1>📖 My Story Vault</h1>
-<p>Adventures stored in enchanted books...</p>
+<p>Stories stored in enchanted books</p>
 
+<div class="picker-wrap">
+<label>Choose Theme</label>
 <select id="themePicker"></select>
+</div>
 </header>
 
 <div class="container">
 
 <div class="story-card"
-onclick="openStory('The Nether Portal','A mysterious portal opened in the village...')">
+onclick="openStory(
+'The Nether Portal',
+'One rainy night a ruined portal glowed beneath the village...'
+)">
 <h2>The Nether Portal</h2>
-<p>An adventure into fire and ancient ruins.</p>
+<p>Adventure beyond the overworld.</p>
 </div>
 
 <div class="story-card"
-onclick="openStory('The End Dragon','A final battle above the void...')">
+onclick="openStory(
+'The End Dragon',
+'The obsidian towers rose over the void as the dragon circled above...'
+)">
 <h2>The End Dragon</h2>
-<p>Heroes versus the dragon.</p>
-</div>
-
-<div class="story-card"
-onclick="openStory('Village Secrets','Something is hidden under the well...')">
-<h2>Village Secrets</h2>
-<p>Mystery beneath the blocks.</p>
+<p>The final boss awaits.</p>
 </div>
 
 </div>
 
+<!-- Minecraft Book -->
 <div id="popup" class="hidden">
-<div class="reader">
-<button onclick="closeStory()">X Close Book</button>
-<h2 id="title"></h2>
-<p id="content"></p>
-</div>
+  <div class="mc-book">
+
+    <div class="book-page left-page">
+      <div class="pixel-title">BOOK</div>
+      <div class="page-lines"></div>
+    </div>
+
+    <div class="book-page right-page">
+      <button class="close-btn" onclick="closeStory()">Done</button>
+
+      <h2 id="title"></h2>
+
+      <div class="book-text">
+        <p id="content"></p>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
