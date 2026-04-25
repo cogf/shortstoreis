@@ -8,11 +8,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<!-- Pixel Font That Actually Works -->
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="theme1">
 
 <header>
@@ -25,50 +25,92 @@
 </div>
 </header>
 
+
 <div class="container">
 
 <div class="story-card"
 onclick="openStory(
-'this is a test',
-'i will fill this'
+'The Nether Portal',
+[
+'I found a ruined portal hidden beneath the village.',
+
+'Stepping through, the Nether stretched forever in crimson fog.',
+
+'I returned carrying ancient treasure and a secret.'
+]
 )">
-<h2>uh to be filled</h2>
-<p>just testing if this workds</p>
+<h2>The Nether Portal</h2>
+<p>A test multi-page story.</p>
 </div>
+
 
 <div class="story-card"
 onclick="openStory(
-'qwertyiop',
-'i play miencraft'
+'Minecraft Notes',
+[
+'I play minecraft too much.',
+
+'Diamonds are temporary.\nBuilding is forever.',
+
+'That is all.'
+]
 )">
-<h2>oefnwu</h2>
-<p>fwpenai</p>
+<h2>qwertyiop</h2>
+<p>Second story test.</p>
 </div>
 
 </div>
 
-<!-- Minecraft Book -->
+
+
 <div id="popup" class="hidden">
-  <div class="mc-book">
+<div class="mc-book">
 
-    <div class="book-page left-page">
-      <div class="pixel-title">book</div>
-      <div class="page-lines"></div>
-    </div>
+<div class="book-page left-page">
+<div class="pixel-title">
+WRITTEN<br>BOOK
+</div>
+</div>
 
-    <div class="book-page right-page">
-      <button class="close-btn" onclick="closeStory()">done</button>
 
-      <h2 id="title"></h2>
+<div class="book-page right-page">
 
-      <div class="book-text">
-        <p id="content"></p>
-      </div>
-    </div>
+<button class="close-btn"
+onclick="closeStory()">
+done
+</button>
 
-  </div>
+<h2 id="title"></h2>
+
+<div class="book-text">
+<p id="content"></p>
+</div>
+
+<div class="page-nav">
+
+<button
+class="page-arrow"
+onclick="prevPage()">
+◀
+</button>
+
+<span class="page-number">
+Page 1
+</span>
+
+<button
+class="page-arrow"
+onclick="nextPage()">
+▶
+</button>
+
+</div>
+
+</div>
+</div>
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
