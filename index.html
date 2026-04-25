@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My Stories</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="theme1">
+
+<header>
+<h1>My Story Vault</h1>
+<p>Short stories by me</p>
+
+<select id="themePicker"></select>
+</header>
+
+<div class="container">
+
+<div class="story-card" onclick="openStory('Story Title Here','Paste your story here later.')">
+<h2>Story Title Here</h2>
+<p>Add your own description here.</p>
+</div>
+
+<div class="story-card" onclick="openStory('Another Story','Paste another story here.')">
+<h2>Another Story</h2>
+<p>Add description here.</p>
+</div>
+
+</div>
+
+<div id="popup" class="hidden">
+<div class="reader">
+<button onclick="closeStory()">Close</button>
+<h2 id="title"></h2>
+<p id="content"></p>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
