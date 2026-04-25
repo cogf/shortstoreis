@@ -1,39 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Johnnys stories</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Storeis</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body class="theme1">
+<body>
 
-<header>
-<h1>storeis</h1>
-<p>Shot</p>
+<div class="layout">
 
-<select id="themePicker"></select>
-</header>
+<aside class="sidebar">
+<h1>STOREIS</h1>
+<p>Short stories</p>
 
-<div class="container">
+<select id="themePicker">
+<option>Theme 1</option>
+<option>Theme 2</option>
+<option>Theme 3</option>
+</select>
+</aside>
 
-<div class="story-card" onclick="openStory('what is this','what is this')">
+<main class="bookshelf">
+
+<div class="book-card"
+onclick="openStory('test123','Paste your full story here.')">
+<div class="book-icon">📖</div>
+<div>
 <h2>test123</h2>
 <p>does this work</p>
 </div>
+</div>
 
-<div class="story-card" onclick="openStory('An','whiat is thsi')">
+<div class="book-card"
+onclick="openStory('qwerty','Another story goes here.')">
+<div class="book-icon">📖</div>
+<div>
 <h2>qwerty</h2>
 <p>qwerty</p>
 </div>
-
 </div>
 
-<div id="popup" class="hidden">
-<div class="reader">
+</main>
+</div>
+
+<div id="popup" class="hidden overlay">
+<div class="reader-box">
 <button onclick="closeStory()">Close</button>
-<h2 id="title"></h2>
-<p id="content"></p>
+<h2 id="storyTitle"></h2>
+<div id="storyText"></div>
 </div>
 </div>
 
