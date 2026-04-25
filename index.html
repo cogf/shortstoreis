@@ -1,42 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>My Stories</title>
+<title>My Story Vault</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Pixel Font That Actually Works -->
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="theme1">
 
-<header>
-<h1>My Story Vault</h1>
-<p>Short stories by me</p>
+<header class="hero">
+<h1>📖 My Story Vault</h1>
+<p>Adventures stored in enchanted books...</p>
 
 <select id="themePicker"></select>
 </header>
 
 <div class="container">
 
-<div class="story-card" onclick="openStory('Story Title Here','Paste your story here later.')">
-<h2>Story Title Here</h2>
-<p>Add your own description here.</p>
+<div class="story-card"
+onclick="openStory('The Nether Portal','A mysterious portal opened in the village...')">
+<h2>The Nether Portal</h2>
+<p>An adventure into fire and ancient ruins.</p>
 </div>
 
-<div class="story-card" onclick="openStory('Another Story','Paste another story here.')">
-<h2>Another Story</h2>
-<p>Add description here.</p>
+<div class="story-card"
+onclick="openStory('The End Dragon','A final battle above the void...')">
+<h2>The End Dragon</h2>
+<p>Heroes versus the dragon.</p>
+</div>
+
+<div class="story-card"
+onclick="openStory('Village Secrets','Something is hidden under the well...')">
+<h2>Village Secrets</h2>
+<p>Mystery beneath the blocks.</p>
 </div>
 
 </div>
 
 <div id="popup" class="hidden">
 <div class="reader">
-<button onclick="closeStory()">Close</button>
+<button onclick="closeStory()">X Close Book</button>
 <h2 id="title"></h2>
 <p id="content"></p>
 </div>
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
