@@ -1,54 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Storeis</title>
+<!doctype html>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="layout">
+<div class="page">
 
 <aside class="sidebar">
 <h1>STOREIS</h1>
-<p>Short stories</p>
+<p>Shot</p>
 
-<select id="themePicker">
+<select>
 <option>Theme 1</option>
 <option>Theme 2</option>
 <option>Theme 3</option>
 </select>
 </aside>
 
-<main class="bookshelf">
+<section class="stories">
 
-<div class="book-card"
-onclick="openStory('test123','Paste your full story here.')">
-<div class="book-icon">📖</div>
-<div>
+<div class="book" onclick="openStory('test123','Put your story here')">
+<div class="spine"></div>
+<div class="corner top"></div>
+<div class="corner bottom"></div>
+
+<div class="content">
+<div class="title-row">
+<div class="pixel-book"></div>
 <h2>test123</h2>
+</div>
+<div class="divider"></div>
 <p>does this work</p>
 </div>
 </div>
 
-<div class="book-card"
-onclick="openStory('qwerty','Another story goes here.')">
-<div class="book-icon">📖</div>
-<div>
+<div class="book" onclick="openStory('qwerty','Story goes here')">
+<div class="spine"></div>
+<div class="corner top"></div>
+<div class="corner bottom"></div>
+
+<div class="content">
+<div class="title-row">
+<div class="pixel-book"></div>
 <h2>qwerty</h2>
+</div>
+<div class="divider"></div>
 <p>qwerty</p>
 </div>
 </div>
 
-</main>
+</section>
+
 </div>
 
-<div id="popup" class="hidden overlay">
-<div class="reader-box">
+<div id="overlay" class="hidden">
+<div class="reader">
 <button onclick="closeStory()">Close</button>
 <h2 id="storyTitle"></h2>
-<div id="storyText"></div>
+<p id="storyText"></p>
 </div>
 </div>
 
