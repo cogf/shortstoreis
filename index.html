@@ -1,65 +1,74 @@
-<!doctype html>
-<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+}
+
+.book{
+padding:45px 35px 45px 85px;
+}
+
+h2{
+font-size:20px;
+}
+}
+</style>
 </head>
 <body>
 
-<div class="page">
+<div class="wrapper">
 
-<aside class="sidebar">
-<h1>STOREIS</h1>
-<p>Shot</p>
-
+<div class="sidebar">
+<div class="logo">STOREIS</div>
+<div class="tag">Shot</div>
 <select>
 <option>Theme 1</option>
 <option>Theme 2</option>
 <option>Theme 3</option>
 </select>
-</aside>
+</div>
 
-<section class="stories">
+<div class="shelf">
 
-<div class="book" onclick="openStory('test123','Put your story here')">
-<div class="spine"></div>
-<div class="corner top"></div>
-<div class="corner bottom"></div>
-
-<div class="content">
-<div class="title-row">
-<div class="pixel-book"></div>
+<div class="book" onclick="openStory('test123','Put your full story here')">
+<div class="corner2"></div>
+<div class="row">
+<div class="icon"></div>
 <h2>test123</h2>
 </div>
 <div class="divider"></div>
 <p>does this work</p>
 </div>
-</div>
 
-<div class="book" onclick="openStory('qwerty','Story goes here')">
-<div class="spine"></div>
-<div class="corner top"></div>
-<div class="corner bottom"></div>
-
-<div class="content">
-<div class="title-row">
-<div class="pixel-book"></div>
+<div class="book" onclick="openStory('qwerty','Your next story here')">
+<div class="corner2"></div>
+<div class="row">
+<div class="icon"></div>
 <h2>qwerty</h2>
 </div>
 <div class="divider"></div>
 <p>qwerty</p>
 </div>
-</div>
-
-</section>
 
 </div>
+</div>
 
-<div id="overlay" class="hidden">
+<div id="overlay" class="overlay">
 <div class="reader">
 <button onclick="closeStory()">Close</button>
-<h2 id="storyTitle"></h2>
-<p id="storyText"></p>
+<div id="storyTitle"></div>
+<div id="storyText"></div>
 </div>
 </div>
 
-<script src="script.js"></script>
+<script>
+function openStory(title,text){
+document.getElementById('storyTitle').textContent=title;
+document.getElementById('storyText').textContent=text;
+document.getElementById('overlay').classList.add('show');
+}
+
+function closeStory(){
+document.getElementById('overlay').classList.remove('show');
+}
+</script>
+
 </body>
 </html>
