@@ -1,54 +1,51 @@
 <!DOCTYPE html>
-}
-
-.book{
-padding:45px 35px 45px 85px;
-}
-
-h2{
-font-size:20px;
-}
-}
-</style>
-</head>
-<body>
-
-<div class="wrapper">
+<div class="page">
 
 <div class="sidebar">
 <div class="logo">STOREIS</div>
-<div class="tag">Shot</div>
+<div class="subtitle">Short Stories</div>
+
 <select>
-<option>Theme 1</option>
-<option>Theme 2</option>
-<option>Theme 3</option>
+<option>Classic Theme</option>
+<option>Nether Theme</option>
+<option>End Theme</option>
 </select>
 </div>
 
-<div class="shelf">
+<div class="library">
 
-<div class="book" onclick="openStory('test123','Put your full story here')">
-<div class="corner2"></div>
-<div class="row">
+<!-- STORY 1 -->
+<div class="book" onclick="openStory('The Lost Portal','Replace this with your full story.')">
+<div class="corner top"></div>
+<div class="corner bottom"></div>
+
+<div class="header-row">
 <div class="icon"></div>
-<h2>test123</h2>
-</div>
-<div class="divider"></div>
-<p>does this work</p>
+<h2>The Lost Portal</h2>
 </div>
 
-<div class="book" onclick="openStory('qwerty','Your next story here')">
-<div class="corner2"></div>
-<div class="row">
+<div class="divider"></div>
+<p>An ancient ruined portal appears in the woods...</p>
+</div>
+
+
+<!-- STORY 2 -->
+<div class="book" onclick="openStory('Ender Library','Put another story here.')">
+<div class="corner top"></div>
+<div class="corner bottom"></div>
+
+<div class="header-row">
 <div class="icon"></div>
-<h2>qwerty</h2>
+<h2>Ender Library</h2>
 </div>
+
 <div class="divider"></div>
-<p>qwerty</p>
+<p>A hidden library floats in the End.</p>
 </div>
 
 </div>
 </div>
+
 
 <div id="overlay" class="overlay">
 <div class="reader">
