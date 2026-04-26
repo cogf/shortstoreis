@@ -1,32 +1,284 @@
 @font-face{
+font-family:'Minecraft';
+src:url('minecraft.ttf') format('truetype');
 }
 
-.close-btn:active{
-transform:translateY(2px);
-border-top-color:#555;
-border-left-color:#555;
-border-right-color:#fff;
-border-bottom-color:#fff;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-iframe{
-flex:1;
-width:100%;
-border:none;
-background:white;
+body{
+background:#f8f5ee;
+color:#3a2f22;
+font-family:'Minecraft', serif;
+transition:.3s;
+min-height:100vh;
 }
 
-/* minecraft biome themes */
-.theme1{background:#f8f5ee;}
-.theme2{background:#2b1515;color:#ffb5a8;}
-.theme3{background:#1b102d;color:#d8c5ff;}
-.theme4{background:#6ba84a;color:white;}
-.theme5{background:#1d1d1d;color:#8dd3ff;}
-.theme6{background:#d9c07a;}
-.theme7{background:#dff4ff;}
-.theme8{background:#0f3d66;color:#c5f0ff;}
-.theme9{background:#1d4d2c;color:#d8ffd7;}
-.theme10{background:#661111;color:#ffbbbb;}
+/* ---------- Header ---------- */
+
+header{
+text-align:center;
+padding:60px 20px 30px;
+}
+
+h1{
+font-family:'Minecraft';
+font-size:1.8rem;
+margin-bottom:18px;
+color:#4b3621;
+}
+
+header p{
+font-size:1rem;
+opacity:.8;
+margin-bottom:30px;
+}
+
+.picker-wrap{
+display:inline-block;
+}
+
+label{
+display:block;
+margin-bottom:10px;
+font-family:'Minecraft';
+font-size:.55rem;
+}
+
+/* minecraft-ish selector */
+select{
+padding:14px 18px;
+background:#c6c6c6;
+border-top:3px solid #fff;
+border-left:3px solid #fff;
+border-right:3px solid #555;
+border-bottom:3px solid #555;
+font-family:'Minecraft';
+font-size:.55rem;
+}
+
+/* ---------- Story Cards ---------- */
+
+.container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+padding:50px;
+}
+
+.story-card{
+background:#f7f2e2;
+border:4px solid #8f7a55;
+padding:34px;
+cursor:pointer;
+box-shadow:8px 8px 0 rgba(0,0,0,.12);
+transition:.2s;
+}
+
+.story-card:hover{
+transform:translateY(-6px);
+}
+
+.story-card h2{
+font-family:'Minecraft';
+font-size:.75rem;
+line-height:2;
+margin-bottom:18px;
+}
+
+.story-card p{
+font-size:1rem;
+line-height:1.8;
+}
+
+/* ---------- Popup ---------- */
+
+.hidden{
+display:none!important;
+}
+
+#popup{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.45);
+backdrop-filter:blur(8px);
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px;
+z-index:999;
+}
+
+/* ---------- Minecraft Book ---------- */
+
+.mc-book{
+width:950px;
+height:600px;
+max-width:95%;
+
+display:grid;
+grid-template-columns:1fr 1fr;
+
+background:
+linear-gradient(
+90deg,
+#e7d7ad 0%,
+#f7eed3 48%,
+#c9aa72 50%,
+#f7eed3 52%,
+#e7d7ad 100%
+);
+
+border:8px solid #705734;
+box-shadow:
+0 0 0 6px #9e7f4d,
+0 30px 60px rgba(0,0,0,.4);
+
+border-radius:8px;
+position:relative;
+overflow:hidden;
+transform:perspective(1600px) rotateX(4deg);
+}
+
+/* spine */
+.mc-book::after{
+content:"";
+position:absolute;
+left:50%;
+top:0;
+width:14px;
+height:100%;
+background:
+linear-gradient(
+to right,
+#8d7044,
+#c9aa72,
+#8d7044
+);
+}
+
+.book-page{
+padding:55px;
+background:
+repeating-linear-gradient(
+transparent,
+transparent 32px,
+rgba(0,0,0,.05) 33px
+);
+}
+
+.left-page{
+display:flex;
+justify-content:center;
+}
+
+.pixel-title{
+margin-top:90px;
+font-family:'Minecraft';
+font-size:.9rem;
+line-height:2.5;
+text-align:center;
+}
+
+.right-page{
+display:flex;
+flex-direction:column;
+}
+
+/* done button */
+.close-btn{
+align-self:flex-start;
+padding:14px 24px;
+background:#c6c6c6;
+color:#111;
+font-family:'Minecraft';
+font-size:.5rem;
+
+border-top:3px solid white;
+border-left:3px solid white;
+border-right:3px solid #555;
+border-bottom:3px solid #555;
+
+cursor:pointer;
+margin-bottom:30px;
+}
+
+#title{
+font-family:'Minecraft';
+font-size:.82rem;
+line-height:2.4;
+margin-bottom:24px;
+}
+
+.book-text{
+background:rgba(255,255,255,.4);
+padding:25px;
+border:1px solid rgba(0,0,0,.08);
+}
+
+#content{
+font-size:1.15rem;
+line-height:2;
+white-space:pre-line;
+}
+
+/* ---------- Page Nav ---------- */
+
+.page-nav{
+margin-top:auto;
+padding-top:30px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:24px;
+}
+
+.page-number{
+font-family:'Minecraft';
+font-size:.45rem;
+}
+
+.page-arrow{
+width:50px;
+height:48px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:#c6c6c6;
+
+border-top:3px solid white;
+border-left:3px solid white;
+border-right:3px solid #555;
+border-bottom:3px solid #555;
+
+font-family:'Minecraft';
+font-size:.8rem;
+cursor:pointer;
+}
+
+.page-arrow:hover{
+transform:translateY(-2px);
+}
+
+/* ---------- Minecraft Biome Themes ---------- */
+
+.theme1{background:#f8f5ee;} /* parchment */
+.theme2{background:#2b1515;color:#ffb5a8;} /* nether */
+.theme3{background:#1b102d;color:#d8c5ff;} /* end */
+.theme4{background:#6ba84a;color:white;} /* overworld */
+.theme5{background:#1d1d1d;color:#8dd3ff;} /* cave */
+.theme6{background:#d9c07a;} /* desert */
+.theme7{background:#dff4ff;} /* snow */
+.theme8{background:#0f3d66;color:#c5f0ff;} /* ocean */
+.theme9{background:#1d4d2c;color:#d8ffd7;} /* jungle */
+.theme10{background:#661111;color:#ffbbbb;} /* redstone */
 .theme11{background:#111016;color:#c7bbff;}
 .theme12{background:#c9b58b;}
 .theme13{background:#0e5d34;color:#baffd2;}
@@ -47,18 +299,27 @@ background:white;
 .theme28{background:#000;color:#fff;}
 .theme29{background:#234fa0;color:#dfeaff;}
 .theme30{
-background:linear-gradient(45deg,#6ba84a,#0f3d66,#1b102d);
+background:
+linear-gradient(45deg,#6ba84a,#0f3d66,#1b102d);
 color:white;
 }
 
+/* ---------- Mobile ---------- */
+
 @media(max-width:800px){
 
-.doc-reader{
-height:92vh;
+.mc-book{
+grid-template-columns:1fr;
+height:auto;
+min-height:560px;
 }
 
-.container{
-padding:25px;
+.left-page{
+display:none;
+}
+
+.mc-book::after{
+display:none;
 }
 
 }
