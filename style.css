@@ -1,6 +1,3 @@
-Use this as your **entire replacement style.css** (cleaned up, duplicates removed, real biome themes, open-book look, local Minecraft.ttf support):
-
-```css
 @font-face{
 font-family:'Minecraft';
 src:url('minecraft.ttf') format('truetype');
