@@ -51,7 +51,7 @@ font-size:.55rem;
 /* minecraft-ish selector */
 select{
 padding:14px 18px;
-background:#c6c6c6;
+background:#FFFFFF;
 border-top:3px solid #fff;
 border-left:3px solid #fff;
 border-right:3px solid #555;
@@ -106,7 +106,7 @@ display:none!important;
 position:fixed;
 inset:0;
 background:rgba(0,0,0,.45);
-backdrop-filter:blur(8px);
+backdrop-filter:blur(0px);
 display:flex;
 justify-content:center;
 align-items:center;
@@ -117,8 +117,8 @@ z-index:999;
 /* ---------- Minecraft Book ---------- */
 
 .mc-book{
-width:950px;
-height:600px;
+width:1080px;
+height:1920px;
 max-width:95%;
 
 display:grid;
@@ -127,19 +127,19 @@ grid-template-columns:1fr 1fr;
 background:
 linear-gradient(
 90deg,
-#e7d7ad 0%,
-#f7eed3 48%,
-#c9aa72 50%,
-#f7eed3 52%,
-#e7d7ad 100%
+#FFFFFF 0%,
+#FFFFFF 48%,
+#FFFFFF 50%,
+#FFFFFF 52%,
+#FFFFFF 100%
 );
 
-border:8px solid #705734;
+border:3px solid #FFFFFF;
 box-shadow:
-0 0 0 6px #9e7f4d,
+0 0 0 6px #FFFFFF,
 0 30px 60px rgba(0,0,0,.4);
 
-border-radius:8px;
+border-radius:3px;
 position:relative;
 overflow:hidden;
 transform:perspective(1600px) rotateX(4deg);
@@ -156,9 +156,9 @@ height:100%;
 background:
 linear-gradient(
 to right,
-#8d7044,
-#c9aa72,
-#8d7044
+#FFFFFF,
+#FFFFFF,
+#FFFFFF
 );
 }
 
