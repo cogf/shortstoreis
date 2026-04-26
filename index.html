@@ -2,13 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport"
+content="width=device-width,initial-scale=1">
+
 <title>storeis</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -23,7 +20,9 @@
 <label>themes</label>
 <select id="themePicker"></select>
 </div>
+
 </header>
+
 
 
 <div class="container">
@@ -42,6 +41,7 @@ onclick="openStory(
 <h2>The Nether Portal</h2>
 <p>A test multi-page story.</p>
 </div>
+
 
 
 <div class="story-card"
@@ -63,22 +63,26 @@ onclick="openStory(
 
 
 
+
 <div id="popup" class="hidden">
+
 <div class="mc-book">
 
 <div class="book-page left-page">
 <div class="pixel-title">
-WRITTEN<br>BOOK
+BOOK<br>AND<br>QUILL
 </div>
 </div>
 
 
 <div class="book-page right-page">
 
-<button class="close-btn"
+<button
+class="close-btn"
 onclick="closeStory()">
-done
+Done
 </button>
+
 
 <h2 id="title"></h2>
 
@@ -86,12 +90,13 @@ done
 <p id="content"></p>
 </div>
 
+
 <div class="page-nav">
 
 <button
 class="page-arrow"
 onclick="prevPage()">
-◀
+<
 </button>
 
 <span class="page-number">
@@ -101,7 +106,7 @@ Page 1
 <button
 class="page-arrow"
 onclick="nextPage()">
-▶
+>
 </button>
 
 </div>
