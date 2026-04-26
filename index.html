@@ -1,24 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>storeis</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body class="theme1">
-
-<header>
-<h1>storeis</h1>
-<p>anonymous</p>
-
 <div class="picker-wrap">
 <label>themes</label>
 <select id="themePicker"></select>
@@ -30,84 +10,42 @@
 
 <div class="story-card"
 onclick="openStory(
-'The Nether Portal',
-[
-'I found a ruined portal hidden beneath the village.',
-
-'Stepping through, the Nether stretched forever in crimson fog.',
-
-'I returned carrying ancient treasure and a secret.'
-]
+'https://docs.google.com/document/d/18cGKF2ZXAbfwKyESn-5ybV_T9oJWLR32AzViPPTSmqo/preview'
 )">
-<h2>The Nether Portal</h2>
-<p>A test multi-page story.</p>
+<h2>The Main Story</h2>
+<p>Opens your Google Doc with images and gifs.</p>
 </div>
 
 
 <div class="story-card"
 onclick="openStory(
-'Minecraft Notes',
-[
-'I play minecraft too much.',
-
-'Diamonds are temporary.\nBuilding is forever.',
-
-'That is all.'
-]
+'https://docs.google.com/document/d/18cGKF2ZXAbfwKyESn-5ybV_T9oJWLR32AzViPPTSmqo/preview'
 )">
-<h2>qwertyiop</h2>
-<p>Second story test.</p>
+<h2>Another Story</h2>
+<p>Second card test.</p>
 </div>
 
 </div>
-
 
 
 <div id="popup" class="hidden">
-<div class="mc-book">
 
-<div class="book-page left-page">
-<div class="pixel-title">
-WRITTEN<br>BOOK
-</div>
-</div>
+<div class="doc-reader">
 
-
-<div class="book-page right-page">
-
-<button class="close-btn"
+<button
+class="close-btn"
 onclick="closeStory()">
-done
+Close
 </button>
 
-<h2 id="title"></h2>
-
-<div class="book-text">
-<p id="content"></p>
-</div>
-
-<div class="page-nav">
-
-<button
-class="page-arrow"
-onclick="prevPage()">
-◀
-</button>
-
-<span class="page-number">
-Page 1
-</span>
-
-<button
-class="page-arrow"
-onclick="nextPage()">
-▶
-</button>
+<iframe
+id="storyFrame"
+src=""
+loading="lazy">
+</iframe>
 
 </div>
 
-</div>
-</div>
 </div>
 
 <script src="script.js"></script>
